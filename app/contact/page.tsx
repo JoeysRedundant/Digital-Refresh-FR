@@ -74,122 +74,118 @@ export default function ContactPage() {
                 <p className="text-neutral-400">Tell us about your project and we'll get back to you within 24 hours.</p>
               </div>
               
-              <Card className="liquid-glass border border-white/10 bg-white/5 backdrop-blur-xl">
-                <CardContent className="pt-6">
-                  <form onSubmit={handleSubmit} className="space-y-8">
-                    <div className="grid gap-6 sm:grid-cols-2">
-                      <div className="space-y-3">
-                        <Label htmlFor="name" className="text-sm font-medium text-neutral-300">
-                          Full Name *
-                        </Label>
-                        <Input
-                          id="name"
-                          required
-                          value={formData.name}
-                          onChange={(e) => handleChange("name", e.target.value)}
-                          className="h-12 liquid-glass border-white/10 bg-white/5 text-white placeholder:text-neutral-500 focus:border-lime-400/50"
-                          placeholder="John Doe"
-                        />
-                      </div>
-                      <div className="space-y-3">
-                        <Label htmlFor="email" className="text-sm font-medium text-neutral-300">
-                          Email Address *
-                        </Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          required
-                          value={formData.email}
-                          onChange={(e) => handleChange("email", e.target.value)}
-                          className="h-12 liquid-glass border-white/10 bg-white/5 text-white placeholder:text-neutral-500 focus:border-lime-400/50"
-                          placeholder="john@example.com"
-                        />
-                      </div>
-                    </div>
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid gap-8 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="text-sm font-medium text-neutral-300">
+                      Full Name *
+                    </Label>
+                    <Input
+                      id="name"
+                      required
+                      value={formData.name}
+                      onChange={(e) => handleChange("name", e.target.value)}
+                      className="h-12 bg-transparent border-0 border-b-2 border-neutral-600 text-white placeholder:text-neutral-500 focus:border-lime-400 focus:ring-0 rounded-none px-0"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="email" className="text-sm font-medium text-neutral-300">
+                      Email Address *
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => handleChange("email", e.target.value)}
+                      className="h-12 bg-transparent border-0 border-b-2 border-neutral-600 text-white placeholder:text-neutral-500 focus:border-lime-400 focus:ring-0 rounded-none px-0"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+                </div>
 
-                    <div className="grid gap-6 sm:grid-cols-2">
-                      <div className="space-y-3">
-                        <Label htmlFor="phone" className="text-sm font-medium text-neutral-300">
-                          Phone Number
-                        </Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={(e) => handleChange("phone", e.target.value)}
-                          className="h-12 liquid-glass border-white/10 bg-white/5 text-white placeholder:text-neutral-500 focus:border-lime-400/50"
-                          placeholder="+1 (555) 000-0000"
-                        />
-                      </div>
-                      <div className="space-y-3">
-                        <Label htmlFor="company" className="text-sm font-medium text-neutral-300">
-                          Company Name
-                        </Label>
-                        <Input
-                          id="company"
-                          value={formData.company}
-                          onChange={(e) => handleChange("company", e.target.value)}
-                          className="h-12 liquid-glass border-white/10 bg-white/5 text-white placeholder:text-neutral-500 focus:border-lime-400/50"
-                          placeholder="Your Company"
-                        />
-                      </div>
-                    </div>
+                <div className="grid gap-8 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <Label htmlFor="phone" className="text-sm font-medium text-neutral-300">
+                      Phone Number
+                    </Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={(e) => handleChange("phone", e.target.value)}
+                      className="h-12 bg-transparent border-0 border-b-2 border-neutral-600 text-white placeholder:text-neutral-500 focus:border-lime-400 focus:ring-0 rounded-none px-0"
+                      placeholder="+1 (555) 000-0000"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="company" className="text-sm font-medium text-neutral-300">
+                      Company Name
+                    </Label>
+                    <Input
+                      id="company"
+                      value={formData.company}
+                      onChange={(e) => handleChange("company", e.target.value)}
+                      className="h-12 bg-transparent border-0 border-b-2 border-neutral-600 text-white placeholder:text-neutral-500 focus:border-lime-400 focus:ring-0 rounded-none px-0"
+                      placeholder="Your Company"
+                    />
+                  </div>
+                </div>
 
-                    <div className="space-y-3">
-                      <Label htmlFor="plan" className="text-sm font-medium text-neutral-300">
-                        Interested In
-                      </Label>
-                      <Select value={formData.plan} onValueChange={(value) => handleChange("plan", value)}>
-                        <SelectTrigger className="h-12 liquid-glass border-white/10 bg-white/5 text-white focus:border-lime-400/50">
-                          <SelectValue placeholder="Select a plan" />
-                        </SelectTrigger>
-                        <SelectContent className="liquid-glass border-white/10 bg-neutral-900 text-white">
-                          <SelectItem value="starter">Starter Plan</SelectItem>
-                          <SelectItem value="professional">Professional Plan</SelectItem>
-                          <SelectItem value="enterprise">Enterprise Plan</SelectItem>
-                          <SelectItem value="custom">Custom Solution</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
+                <div className="space-y-2">
+                  <Label htmlFor="plan" className="text-sm font-medium text-neutral-300">
+                    Interested In
+                  </Label>
+                  <Select value={formData.plan} onValueChange={(value) => handleChange("plan", value)}>
+                    <SelectTrigger className="h-12 bg-transparent border-0 border-b-2 border-neutral-600 text-white focus:border-lime-400 focus:ring-0 rounded-none px-0">
+                      <SelectValue placeholder="Select a plan" />
+                    </SelectTrigger>
+                    <SelectContent className="liquid-glass border-white/10 bg-neutral-900 text-white">
+                      <SelectItem value="starter">Starter Plan</SelectItem>
+                      <SelectItem value="professional">Professional Plan</SelectItem>
+                      <SelectItem value="enterprise">Enterprise Plan</SelectItem>
+                      <SelectItem value="custom">Custom Solution</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
 
-                    <div className="space-y-3">
-                      <Label htmlFor="message" className="text-sm font-medium text-neutral-300">
-                        Project Details *
-                      </Label>
-                      <Textarea
-                        id="message"
-                        required
-                        value={formData.message}
-                        onChange={(e) => handleChange("message", e.target.value)}
-                        className="min-h-[160px] liquid-glass border-white/10 bg-white/5 text-white placeholder:text-neutral-500 focus:border-lime-400/50"
-                        placeholder="Tell us about your project, goals, and timeline..."
-                      />
-                    </div>
+                <div className="space-y-2">
+                  <Label htmlFor="message" className="text-sm font-medium text-neutral-300">
+                    Project Details *
+                  </Label>
+                  <Textarea
+                    id="message"
+                    required
+                    value={formData.message}
+                    onChange={(e) => handleChange("message", e.target.value)}
+                    className="min-h-[160px] bg-transparent border-0 border-b-2 border-neutral-600 text-white placeholder:text-neutral-500 focus:border-lime-400 focus:ring-0 rounded-none px-0 resize-none"
+                    placeholder="Tell us about your project, goals, and timeline..."
+                  />
+                </div>
 
-                    <div className="pt-4">
-                      <Button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full h-12 rounded-lg bg-lime-400 text-base font-medium text-black hover:bg-lime-300 disabled:opacity-50 transition-colors"
-                      >
-                        {isSubmitting ? (
-                          "Sending..."
-                        ) : submitStatus === "success" ? (
-                          "Message Sent!"
-                        ) : (
-                          "Send Message"
-                        )}
-                      </Button>
+                <div className="pt-6">
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full h-12 rounded-lg bg-lime-400 text-base font-medium text-black hover:bg-lime-300 disabled:opacity-50 transition-colors"
+                  >
+                    {isSubmitting ? (
+                      "Sending..."
+                    ) : submitStatus === "success" ? (
+                      "Message Sent!"
+                    ) : (
+                      "Send Message"
+                    )}
+                  </Button>
 
-                      {submitStatus === "success" && (
-                        <p className="mt-4 text-center text-sm text-lime-300">
-                          Thank you! We'll get back to you within 24 hours.
-                        </p>
-                      )}
-                    </div>
-                  </form>
-                </CardContent>
-              </Card>
+                  {submitStatus === "success" && (
+                    <p className="mt-4 text-center text-sm text-lime-300">
+                      Thank you! We'll get back to you within 24 hours.
+                    </p>
+                  )}
+                </div>
+              </form>
             </div>
 
             {/* Contact Info */}

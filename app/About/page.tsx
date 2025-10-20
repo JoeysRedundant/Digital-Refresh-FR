@@ -1,43 +1,47 @@
 // app/about/page.tsx
 import React from "react";
+import { SiteHeader } from "@/components/site-header";
+import { AppverseFooter } from "@/components/appverse-footer";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function AboutPage() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Skitbit International",
-    url: "https://theskitbit.com",
-    logo: "https://theskitbit.com/logo.png",
+    name: "Digital Edge",
+    url: "https://digitaledge.com",
+    logo: "https://digitaledge.com/logo.png",
     description:
-      "Skitbit International is a 3D product animation agency serving clients in Miami, Los Angeles, New York, Canada, and the UK.",
+      "Digital Edge is a professional website design agency creating websites that convert and captivate audiences with modern design and cutting-edge technology.",
     sameAs: [
-      "https://www.instagram.com/skitbit",
-      "https://www.linkedin.com/company/skitbit",
+      "https://www.instagram.com/digitaledge",
+      "https://www.linkedin.com/company/digitaledge",
     ],
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Miami",
-      addressRegion: "FL",
+      addressLocality: "San Francisco",
+      addressRegion: "CA",
       addressCountry: "US",
     },
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+1-555-555-5555",
+        telephone: "+1-555-123-4567",
         contactType: "customer service",
       },
     ],
     areaServed: [
-      { "@type": "Place", name: "Miami" },
-      { "@type": "Place", name: "Los Angeles" },
-      { "@type": "Place", name: "New York" },
+      { "@type": "Place", name: "United States" },
       { "@type": "Place", name: "Canada" },
       { "@type": "Place", name: "United Kingdom" },
     ],
   };
 
   return (
-    <>
+    <main className="min-h-[100dvh] text-white">
+      <SiteHeader />
+      
       {/* SEO Schema for Google + LLMs */}
       <script
         type="application/ld+json"
@@ -49,10 +53,10 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative bg-black text-white py-20 px-6 md:px-12 lg:px-20 text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          About Skitbit International
+          About Digital Edge
         </h1>
         <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-80">
-          Pioneering the future of 3D product animation for global brands.
+          Creating websites that convert and captivate audiences with modern design and cutting-edge technology.
         </p>
       </section>
 
@@ -61,28 +65,28 @@ export default function AboutPage() {
         <div className="grid gap-12 md:grid-cols-3">
           {[
             {
-              title: "3D Product Animation",
-              desc: "Photo-realistic animations that showcase your products in stunning detail.",
+              title: "Modern Website Design",
+              desc: "Creating stunning, responsive websites that work perfectly on all devices.",
             },
             {
-              title: "Global Reach",
-              desc: "Serving Miami, LA, New York, Canada, and the UK with world-class visuals.",
+              title: "Conversion Optimization",
+              desc: "Designing websites that drive results and turn visitors into customers.",
             },
             {
               title: "Cutting-edge Technology",
-              desc: "Using the latest rendering engines and motion design tools.",
+              desc: "Using the latest web technologies and frameworks for optimal performance.",
             },
             {
               title: "Brand Storytelling",
-              desc: "Helping brands communicate their vision through immersive 3D visuals.",
+              desc: "Helping businesses communicate their vision through compelling web experiences.",
             },
             {
-              title: "Collaborative Workflow",
-              desc: "Work directly with our creative team for maximum efficiency.",
+              title: "Collaborative Process",
+              desc: "Working directly with clients for seamless project delivery.",
             },
             {
-              title: "SEO & Marketing Focus",
-              desc: "Optimized content to enhance your visibility on search engines.",
+              title: "SEO & Performance",
+              desc: "Optimized websites that rank well and load fast for better user experience.",
             },
           ].map((feature, index) => (
             <div
@@ -99,18 +103,17 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-20 bg-black text-center text-white px-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Ready to Elevate Your Brand?
+          Ready to Transform Your Digital Presence?
         </h2>
         <p className="text-lg opacity-80 mb-8">
-          Let Skitbit International bring your products to life.
+          Let Digital Edge create a website that converts and captivates your audience.
         </p>
-        <a
-          href="/contact"
-          className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-neutral-200 transition-all"
-        >
-          Get in Touch
-        </a>
+        <Button asChild className="rounded-full bg-lime-400 px-6 py-3 text-black font-semibold hover:bg-lime-300 transition-all">
+          <Link href="/contact">Get Started</Link>
+        </Button>
       </section>
-    </>
+      
+      <AppverseFooter />
+    </main>
   );
 }

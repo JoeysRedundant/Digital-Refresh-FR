@@ -4,8 +4,16 @@ import LazyVideo from "./lazy-video"
 
 export function Hero() {
   const buttonNew = (
-    <Button asChild className="rounded-full bg-lime-400 px-6 text-black hover:bg-lime-300">
-      <a href="/contact">Start Your Project</a>
+    <Button asChild className="group relative overflow-hidden rounded-full bg-lime-400 px-8 py-4 text-black font-semibold text-lg transition-all duration-300 hover:bg-lime-300 hover:scale-105 hover:shadow-2xl hover:shadow-lime-400/25 animate-pulse hover:animate-none">
+      <a href="/contact" className="relative z-10">
+        <span className="relative">
+          Start Your Project
+          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></span>
+        </span>
+        <div className="absolute inset-0 bg-gradient-to-r from-lime-300 via-lime-400 to-lime-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute -inset-1 bg-gradient-to-r from-lime-400 via-lime-300 to-lime-400 rounded-full opacity-0 group-hover:opacity-75 blur-sm transition-opacity duration-300"></div>
+        <div className="absolute -inset-2 bg-gradient-to-r from-lime-400/20 via-lime-300/30 to-lime-400/20 rounded-full opacity-50 blur-md animate-ping"></div>
+      </a>
     </Button>
   )
 

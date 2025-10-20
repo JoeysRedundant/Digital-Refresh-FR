@@ -51,53 +51,6 @@ export function AppverseFooter() {
         </div>
       </div>
 
-      {/* Download the app */}
-      <div className="container mx-auto px-4 py-12 sm:py-16">
-        <Card className="relative overflow-hidden rounded-3xl liquid-glass p-6 sm:p-10">
-          <div className="relative grid items-center gap-8 md:grid-cols-2">
-            {/* Left copy */}
-            <div>
-              <p className="mb-2 text-[11px] tracking-widest text-lime-300">SEAMLESS COLLABORATION</p>
-              <h3 className="text-2xl font-bold leading-tight text-white sm:text-3xl">
-                Review &amp; approve designs from anywhere
-              </h3>
-              <p className="mt-2 max-w-prose text-sm text-neutral-400">
-                Preview mockups, leave feedback, and approve designs from any device. Our collaboration tools make the
-                process smooth and efficient.
-              </p>
-            </div>
-
-            {/* Right mockup */}
-            <div className="mx-auto w-full max-w-[320px]">
-              <div className="relative rounded-[28px] liquid-glass p-2 shadow-2xl">
-                <div className="relative aspect-[9/19] w-full overflow-hidden rounded-2xl bg-black">
-                  <LazyVideo
-                    src="/website-design-review-and-approval-interface-on-mo.jpg"
-                    className="absolute inset-0 h-full w-full object-cover"
-                    autoplay={true}
-                    loop={true}
-                    muted={true}
-                    playsInline={true}
-                    aria-label="Digital Edge app preview - approvals made easy"
-                  />
-                  {/* On-screen content */}
-                  <div className="relative p-3">
-                    <div className="mx-auto mb-3 h-1.5 w-16 rounded-full bg-white/20" />
-                    <div className="space-y-1 px-1">
-                      <div className="text-5xl font-extrabold text-lime-300">Approvals Made Easy</div>
-                      <p className="text-xs text-white/80">From feedback to approval in a single flow</p>
-                      <div className="mt-3 inline-flex items-center rounded-full bg-black/40 px-2 py-0.5 text-[10px] uppercase tracking-wider text-lime-300">
-                        Zero Hassle
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Card>
-      </div>
-
       {/* Footer */}
       <footer className="border-t border-white/10 pb-20 md:pb-10">
         <div className="container mx-auto px-4 py-10">

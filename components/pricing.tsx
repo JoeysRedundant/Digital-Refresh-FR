@@ -69,7 +69,7 @@ export function Pricing() {
               </div>
               <div className="flex items-end gap-2 text-neutral-100">
                 <div className="text-xl font-bold tracking-tight" itemProp="price">
-                  $2,999
+                  $500
                 </div>
                 <span className="pb-0.5 text-[11px] text-neutral-400">per project</span>
                 <meta itemProp="priceCurrency" content="USD" />
@@ -114,7 +114,7 @@ export function Pricing() {
               </div>
               <div className="flex items-end gap-2 text-neutral-100">
                 <div className="text-xl font-bold tracking-tight" itemProp="price">
-                  $5,999
+                  $1,500
                 </div>
                 <span className="pb-0.5 text-[11px] text-neutral-400">per project</span>
                 <meta itemProp="priceCurrency" content="USD" />
@@ -161,7 +161,7 @@ export function Pricing() {
               </div>
               <div className="flex items-end gap-2 text-white">
                 <div className="text-xl font-bold tracking-tight" itemProp="price">
-                  $12,999
+                  $2,000
                 </div>
                 <span className="pb-0.5 text-[11px] text-neutral-400">per project</span>
                 <meta itemProp="priceCurrency" content="USD" />
