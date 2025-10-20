@@ -90,13 +90,12 @@ function PhoneCard({
           />
         )}
 
-        {/* Overlay content */}
-        <div className="relative z-10 p-3 bg-gradient-to-t from-black/80 via-black/40 to-transparent h-full flex flex-col justify-end">
-          <div className="mx-auto mb-3 h-1.5 w-16 rounded-full bg-white/20" />
-          <div className="space-y-1 px-1">
-            <div className="text-3xl font-bold leading-snug text-white drop-shadow-lg">{title}</div>
-            <p className="text-xs text-white/90 drop-shadow-md">{sub}</p>
-            <div className="mt-3 inline-flex items-center rounded-full bg-black/50 backdrop-blur-sm px-2 py-0.5 text-[10px] uppercase tracking-wider text-lime-300 border border-lime-300/30">
+        {/* Overlay content - centered and translucent */}
+        <div className="relative z-10 h-full flex flex-col justify-center items-center text-center p-4">
+          <div className="space-y-2">
+            <div className="text-2xl font-bold leading-snug text-white/80 drop-shadow-lg backdrop-blur-sm">{title}</div>
+            <p className="text-xs text-white/70 drop-shadow-md backdrop-blur-sm">{sub}</p>
+            <div className="mt-2 inline-flex items-center rounded-full bg-black/30 backdrop-blur-sm px-2 py-0.5 text-[10px] uppercase tracking-wider text-lime-300/80 border border-lime-300/20">
               {tone === "calm" ? "digital edge" : tone}
             </div>
           </div>
