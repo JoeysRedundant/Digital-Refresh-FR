@@ -90,12 +90,12 @@ function PhoneCard({
           />
         )}
 
-        {/* Overlay content - centered and translucent */}
+        {/* Overlay content - centered text only */}
         <div className="relative z-10 h-full flex flex-col justify-center items-center text-center p-4">
           <div className="space-y-2">
-            <div className="text-2xl font-bold leading-snug text-white/80 drop-shadow-lg backdrop-blur-sm">{title}</div>
-            <p className="text-xs text-white/70 drop-shadow-md backdrop-blur-sm">{sub}</p>
-            <div className="mt-2 inline-flex items-center rounded-full bg-black/30 backdrop-blur-sm px-2 py-0.5 text-[10px] uppercase tracking-wider text-lime-300/80 border border-lime-300/20">
+            <div className="text-2xl font-bold leading-snug text-white/80 drop-shadow-lg">{title}</div>
+            <p className="text-xs text-white/70 drop-shadow-md">{sub}</p>
+            <div className="mt-2 text-[10px] uppercase tracking-wider text-lime-300/80">
               {tone === "calm" ? "digital edge" : tone}
             </div>
           </div>
@@ -105,42 +105,46 @@ function PhoneCard({
   )
 }
 
-// Phone data with working video sources and fallback gradients
+// Phone data with videos that correlate to each concept
 const phoneData = [
   {
     title: "Results",
     sub: "Websites that drive conversions.",
     tone: "results",
     gradient: "from-[#0b0b0b] via-[#0f172a] to-[#020617]",
-    // Using a working video URL - you can replace with your own videos
-    videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    // Results-focused video - showing analytics and success metrics
+    videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
   },
   {
     title: "Speed",
     sub: "Lightning-fast load times.",
     tone: "speed",
     gradient: "from-[#0b1a0b] via-[#052e16] to-[#022c22]",
-    videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    // Speed-focused video - showing fast motion and performance
+    videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
   },
   {
     title: "Social",
     sub: "Optimized for sharing & engagement.",
     tone: "social",
     gradient: "from-[#001028] via-[#0b355e] to-[#052e5e]",
-    videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    // Social-focused video - showing connectivity and interaction
+    videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
   },
   {
     title: "Standout",
     sub: "Designs that demand attention.",
     tone: "standout",
     gradient: "from-[#0b0b0b] via-[#1f2937] to-[#0b1220]",
-    videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    // Standout video - showing unique and eye-catching visuals
+    videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
   },
   {
     title: "Premium",
     sub: "Enterprise-grade quality.",
     tone: "premium",
     gradient: "from-[#0b0b0b] via-[#111827] to-[#052e16]",
-    videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    // Premium video - showing high-quality, professional content
+    videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
   },
 ]
